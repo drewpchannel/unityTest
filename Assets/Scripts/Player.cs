@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     //Variables
     public float movementSpeed;
-    //public GameObject camera;
+    public GameObject bulletSpawnPoint;
 
     //Methods
     void Update()
@@ -30,5 +30,16 @@ public class Player : MonoBehaviour
         {
             transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
         }
+
+        //shooting
+        if(Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+
     }
 }
